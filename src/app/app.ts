@@ -1,18 +1,20 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import "@arcgis/map-components/components/arcgis-map";
+// Register the web components you are using
+import '@arcgis/map-components/components/arcgis-map';
+import '@arcgis/map-components/components/arcgis-zoom';
+import '@arcgis/map-components/components/arcgis-legend';
 
 @Component({
-  selector: "app-root",
+  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: "./app.html",
-  styleUrl: "./app.scss",
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Set the schema here
+  templateUrl: './app.html',
+  styleUrl: './app.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class App {
   arcgisViewReadyChange(event: CustomEvent) {
-    // The view is ready, add additional functionality below
+    const view = (event as any)?.detail?.view;
+    console.log('✅ MapView is ready:', view);
   }
 }
