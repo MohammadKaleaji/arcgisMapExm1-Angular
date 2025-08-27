@@ -1,1 +1,12 @@
-:host { display: block; height: 100vh; }
+/* 
+  Component-level CSS for the Angular AppComponent
+  ------------------------------------------------
+  :host selector = this component’s container element.
+  Ensures our map component fills the full viewport height.
+*/
+
+:host {
+    display: block;
+    height: 100vh;
+  }
+  

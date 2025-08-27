@@ -1,7 +1,18 @@
+/* 
+  Global styles for our Angular app with ArcGIS Map Components
+  ------------------------------------------------------------
+  We import CSS from three sources:
+   1. Calcite components (UI styling for Esri web components)
+   2. ArcGIS core theme (base widget styles like buttons, popups, etc.)
+   3. Map Components base CSS (handles layout/slots for <arcgis-map>, <arcgis-zoom>, etc.)
+*/
+
+@import "https://js.arcgis.com/calcite-components/3.2.1/calcite.css";
 @import "https://js.arcgis.com/4.33/@arcgis/core/assets/esri/themes/light/main.css";
 @import "https://js.arcgis.com/4.33/map-components/main.css";
-@import "https://js.arcgis.com/calcite-components/3.2.1/calcite.css";
 
-html, body { height: 100%; margin: 0; }
-
-:host { display: block; height: 100vh; }
+/* Ensure the document fills the entire viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+}

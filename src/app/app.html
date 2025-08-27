@@ -1,8 +1,19 @@
+<!--
+  Angular template that hosts our map and widgets
+  -----------------------------------------------
+  We are loading a WebMap by its item-id from ArcGIS Online.
+  This example comes directly from Esri's Tutorial ("Display a web map").
+  https://developers.arcgis.com/javascript/latest/tutorials/display-a-web-map/
+-->
+
 <arcgis-map
   item-id="237b9584339446a0b56317b5962a4971"
   style="display:block; height:100vh;"
   (arcgisViewReadyChange)="arcgisViewReadyChange($event)"
 >
+  <!-- Zoom widget: shows + and - controls -->
   <arcgis-zoom position="top-left"></arcgis-zoom>
+
+  <!-- Legend widget: auto-populates based on WebMap layers -->
   <arcgis-legend position="bottom-right"></arcgis-legend>
 </arcgis-map>
